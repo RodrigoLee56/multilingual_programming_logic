@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1672895166 source:/home/monkeydluffy/cursos/multilingual_programming_logic/courseC/teste_debug/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
