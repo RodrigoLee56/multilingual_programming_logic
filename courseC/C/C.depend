@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1672954542 source:/home/monkeydluffy/cursos/multilingual_programming_logic/courseC/C/retangulo.c
+	<stdio.h>
+	<math.h>
+
+1672951279 source:/home/monkeydluffy/cursos/multilingual_programming_logic/courseC/C/terreno.c
+	<stdio.h>
+
