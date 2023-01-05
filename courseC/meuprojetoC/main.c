@@ -1,22 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+
+void limpar_entrada() {
+    char c;
+    while ((c = getchar()) != '\n' && c != EOF) {}
+}
 
 int main()
 {
-    int x, soma, n, i;
 
-    soma = 0;
+    double c, f ;
+    char resp;
 
-    printf("Quantos números serão digitados: ");
-    scanf("%d", &n);
+    do {
 
-    for(i = 1; i <= n; i++){
-        printf("Digite um número: ");
-        scanf("%d", &x);
-        soma += x;
+        printf("Digite a temperatura em Celsius: ");
+        scanf("%lf", &c);
+        f = 9.0 * c / 5.0 + 32.0;
+        printf("Equivalente em Fahrenheit: %.1lf\n", f);
+        printf("Deseja repetir (s/n)? ");
+        limpar_entrada();
+        scanf("%c", &resp);
+
     }
-
-    printf("SOMA = %d\n", soma);
+    while(resp == 's');
 
     return 0;
 }
