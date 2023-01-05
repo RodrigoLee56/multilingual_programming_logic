@@ -1,29 +1,29 @@
 #include <stdio.h>
 
-
-void limpar_entrada() {
-    char c;
-    while ((c = getchar()) != '\n' && c != EOF) {}
-}
-
 int main() {
 
-    int n, i;
+    int x, y, i, j;
+    printf("Quantas linhas vai ter a matriz? ");
+    scanf("%d", &x);
+    printf("Quantas colunas vai ter a matriz? ");
+    scanf("%d", &y);
 
-    printf("Quantos numeros voce vai digitar? ");
-    scanf("%d", &n);
+    int matrix[x][y];
 
-    double vect[n];
-
-    for(i = 0; i < n; i++) {
-        printf("Digite um numero: ");
-        scanf("%lf", &vect[i]);
+    for(i = 0; i < x; i++) {
+        for (j = 0; j < y; j++) {
+            printf("Elemento [%d,%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
     }
 
-    printf("\nNÚMEROS DIGITADOS: \n");
+    printf("\nMATRIZ DIGITADOS: \n");
 
-    for (i = 0; i < n; i++) {
-        printf("%.2lf\n",vect[i]);
+    for(i = 0; i < x; i++) {
+        for (j = 0; j < y; j++) {
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;
