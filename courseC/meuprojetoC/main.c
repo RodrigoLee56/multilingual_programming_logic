@@ -3,17 +3,17 @@
 
 int main()
 {
-    int x, soma;
+    int x, soma, n, i;
 
     soma = 0;
-    printf("Digite o primeiro numero: ");
-    scanf("%d", &x);
 
-    while (x != 0)
-    {
-        soma = soma + x;
-        printf("Digite outro numero: ");
+    printf("Quantos números serão digitados: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++){
+        printf("Digite um número: ");
         scanf("%d", &x);
+        soma += x;
     }
 
     printf("SOMA = %d\n", soma);
