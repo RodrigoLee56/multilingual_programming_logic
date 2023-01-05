@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    int hora;
-    printf("Digite uma hora do dia: ");
-    scanf("%d", &hora);
+int main()
+{
+    int x, soma;
 
-    if (hora < 12 && hora > 5) {
-        printf("Bom dia!\n");
-    } else {
-        printf("Boa tarde!\n");
+    soma = 0;
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &x);
+
+    while (x != 0)
+    {
+        soma = soma + x;
+        printf("Digite outro numero: ");
+        scanf("%d", &x);
     }
+
+    printf("SOMA = %d\n", soma);
+
     return 0;
 }
