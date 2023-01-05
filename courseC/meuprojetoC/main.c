@@ -6,24 +6,25 @@ void limpar_entrada() {
     while ((c = getchar()) != '\n' && c != EOF) {}
 }
 
-int main()
-{
+int main() {
 
-    double c, f ;
-    char resp;
+    int n, i;
 
-    do {
+    printf("Quantos numeros voce vai digitar? ");
+    scanf("%d", &n);
 
-        printf("Digite a temperatura em Celsius: ");
-        scanf("%lf", &c);
-        f = 9.0 * c / 5.0 + 32.0;
-        printf("Equivalente em Fahrenheit: %.1lf\n", f);
-        printf("Deseja repetir (s/n)? ");
-        limpar_entrada();
-        scanf("%c", &resp);
+    double vect[n];
 
+    for(i = 0; i < n; i++) {
+        printf("Digite um numero: ");
+        scanf("%lf", &vect[i]);
     }
-    while(resp == 's');
+
+    printf("\nNÚMEROS DIGITADOS: \n");
+
+    for (i = 0; i < n; i++) {
+        printf("%.2lf\n",vect[i]);
+    }
 
     return 0;
 }
