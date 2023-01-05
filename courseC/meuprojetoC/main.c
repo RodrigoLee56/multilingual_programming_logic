@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    printf("Hello world!\n");
+int main() {
+    int hora;
+    printf("Digite uma hora do dia: ");
+    scanf("%d", &hora);
+
+    if (hora < 12 && hora > 5) {
+        printf("Bom dia!\n");
+    } else {
+        printf("Boa tarde!\n");
+    }
     return 0;
 }
